@@ -1,7 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <!-- ??? -->
-    404 forbidden
-  </body>
+<head>
+    <meta charset="utf-8" />
+    <title>canvas playground</title>
+    <style>
+    	* { padding: 0; margin: 0; position: relative;}
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas"></canvas>
+
+<script>
+	var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+
+  var x = canvas.width/2;
+  var y = canvas.height-30;
+
+  var dx = 2;
+  var dy = -2;
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.arc(x, y, 10, 0, Math.PI*2);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
+
+    x += dx;
+    y += dy;
+  }
+  setInterval(draw, 10);
+
+  $(function () {
+    sizing();
+    $(window).resize(function() {
+        sizing();
+    });
+  });
+ 
+  function sizing(){
+    $("#main").attr({height:$("#wrapper").height()});
+    $("#main").attr({width:$("#wrapper").width()});
+  }
+</script>
+
+</body>
 </html>
