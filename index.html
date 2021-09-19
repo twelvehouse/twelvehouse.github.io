@@ -4,17 +4,30 @@
     <meta charset="utf-8" />
     <title>canvas playground</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+    	/* * { padding: 0; margin: 0; } */
+      body {
+        border: 0;
+        background-color: white;
+      }
+      canvas {
+        width: 100vw;
+        height: 100vh;
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
+    	/* canvas { background: #eee; display: block; margin: 0 auto; } */
     </style>
 </head>
 <body>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
+<canvas id="myCanvas"></canvas>
 
 <script>
   // キャンバスの定義
 	var canvas = document.getElementById("myCanvas");
+  canvas.width = 400;
+  canvas.height = 300;
   var ctx = canvas.getContext("2d");
 
   
@@ -27,28 +40,11 @@
   var circleRadius = 5; // 円の半径
   var circleColor = randomColor(); // 円の初期カラー
 
-  var paddleHeight = 10;  // パドルの高さ
-  var paddleWidth = 75;   // パドルの幅
-  var paddleX = (canvas.width-paddleWidth)/2; // パドルのX位置
-
-  // 左右キーの押下判定用
-  var rightPressed = false;
-  var leftPressed = false;
-
   // 円の描画
   function drawCircle() {
     ctx.beginPath();
     ctx.arc(x, y, circleRadius, 0, Math.PI*2);
     ctx.fillStyle = circleColor;
-    ctx.fill();
-    ctx.closePath();
-  }
-
-  // パドルの描画
-  function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
   }
@@ -59,71 +55,42 @@
     return color;
   }
 
-  // キー押下判定用
-  document.addEventListener("keydown", keyDownHandler, false);
-  document.addEventListener("keyup", keyUpHandler, false);
-
-  // キーが押されたとき
-  function keyDownHandler(e) {
-    if(e.key == "Right" || e.key == "ArrowRight") {
-        rightPressed = true;
-    }
-    else if(e.key == "Left" || e.key == "ArrowLeft") {
-        leftPressed = true;
-    }
-  }
-  // キーが離されたとき
-  function keyUpHandler(e) {
-    if(e.key == "Right" || e.key == "ArrowRight") {
-        rightPressed = false;
-    }
-    else if(e.key == "Left" || e.key == "ArrowLeft") {
-        leftPressed = false;
-    }
-  }
-
-  // キーが押されていたらパドルを移動させる
-  if(rightPressed && paddleX < canvas.width-paddleWidth) {
-    paddleX += 7;
-  }
-  else if(leftPressed && paddleX > 0) {
-    paddleX -= 7;
-  }
-
   // 更新処理
   function update() {
+    resize(ctx.canvas);
     // ctx.clearRect(0, 0, canvas.width, canvas.height); // 古いフレームを削除
     drawCircle(); // 円を描画
-    drawPaddle(); // パドルを描画
     x += dx;
     y += dy;
 
     // 上下左右にぶつかったらベクトルを判定してカラー変更
-    // if(x + dx > canvas.width - circleRadius || x + dx < circleRadius) {
-    //   dx = -dx;
-    //   circleColor = randomColor();
-    // }
-    // if(y + dy > canvas.height - circleRadius || y + dy < circleRadius) {
-    //   dy = -dy;
-    //   circleColor = randomColor();
-    // }
-    if(x + dx > canvas.width-circleRadius || x + dx < circleRadius) {
-        dx = -dx;
+    if(x + dx > canvas.width - circleRadius || x + dx < circleRadius) {
+      dx = -dx;
+      circleColor = randomColor();
     }
-    if(y + dy < circleRadius) {
-        dy = -dy;
-    } else if(y + dy > canvas.height-circleRadius) {
-        if(x > paddleX && x < paddleX + paddleWidth) {
-            dy = -dy;
-        }
-        else {
-            alert("GAME OVER");
-            document.location.reload();
-        }
+    if(y + dy > canvas.height - circleRadius || y + dy < circleRadius) {
+      dy = -dy;
+      circleColor = randomColor();
     }
   }
   // 更新処理の更新
-  var interval = setInterval(draw, 10);
+  setInterval(update, 10);
+
+  function resize(canvas) {
+    // ブラウザがcanvasを表示しているサイズを調べる。
+    var displayWidth  = canvas.clientWidth;
+    var displayHeight = canvas.clientHeight;
+  
+    // canvasの「描画バッファーのサイズ」と「表示サイズ」が異なるかどうか確認する。
+    if (canvas.width  != displayWidth ||
+        canvas.height != displayHeight) {
+  
+      // サイズが違っていたら、描画バッファーのサイズを
+      // 表示サイズと同じサイズに合わせる。
+      canvas.width  = displayWidth;
+      canvas.height = displayHeight;
+    }
+  }
 </script>
 
 </body>
