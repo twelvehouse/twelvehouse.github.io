@@ -22,8 +22,8 @@
   var x = canvas.width/2;
   var y = canvas.height-30;
   // 移動速度
-  var dx = 2;
-  var dy = -2;
+  var dx = 0.5;
+  var dy = -0.5;
   var circleRadius = 5; // 円の半径
   var circleColor = randomColor(); // 円の初期カラー
 
@@ -60,7 +60,7 @@
     }
   }
   // 更新処理の更新
-  setInterval(update, 10);
+  setInterval(update, 1);
 </script>
 
 </body>
