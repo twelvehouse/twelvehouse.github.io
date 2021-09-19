@@ -4,30 +4,17 @@
     <meta charset="utf-8" />
     <title>canvas playground</title>
     <style>
-    	/* * { padding: 0; margin: 0; } */
-      body {
-        border: 0;
-        background-color: white;
-      }
-      canvas {
-        width: 100vw;
-        height: 100vh;
-        background: #eee;
-        display: block;
-        margin: 0 auto;
-      }
-    	/* canvas { background: #eee; display: block; margin: 0 auto; } */
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
 
-<canvas id="myCanvas"></canvas>
+<canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
   // キャンバスの定義
 	var canvas = document.getElementById("myCanvas");
-  canvas.width = 400;
-  canvas.height = 300;
   var ctx = canvas.getContext("2d");
 
   
@@ -57,7 +44,6 @@
 
   // 更新処理
   function update() {
-    resize(ctx.canvas);
     // ctx.clearRect(0, 0, canvas.width, canvas.height); // 古いフレームを削除
     drawCircle(); // 円を描画
     x += dx;
@@ -75,22 +61,6 @@
   }
   // 更新処理の更新
   setInterval(update, 10);
-
-  function resize(canvas) {
-    // ブラウザがcanvasを表示しているサイズを調べる。
-    var displayWidth  = canvas.clientWidth;
-    var displayHeight = canvas.clientHeight;
-  
-    // canvasの「描画バッファーのサイズ」と「表示サイズ」が異なるかどうか確認する。
-    if (canvas.width  != displayWidth ||
-        canvas.height != displayHeight) {
-  
-      // サイズが違っていたら、描画バッファーのサイズを
-      // 表示サイズと同じサイズに合わせる。
-      canvas.width  = displayWidth;
-      canvas.height = displayHeight;
-    }
-  }
 </script>
 
 </body>
