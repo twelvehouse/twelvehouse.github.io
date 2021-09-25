@@ -1,13 +1,18 @@
+[URL] https://www.reddit.com/r/ffxiv/comments/ptspr6/every_social_feature_in_xiv_is_enabling_stalking/
+
+[EN]
 Every social feature in XIV is enabling stalking and harassment and I think this should be a bigger deal.
 
 Please, please, if you see this post and agree with it, ask about this topic in the thread for the YoshiP interview, 
 and join me in posting about it on the Forums/Twitter. Only negative press will change about this.
+
 
 EDIT BECAUSE PEOPLE KEEP MAKING STRAWMAN ARGUMENTS: 
 I (and most people who get harrassed) just want the ability to 
 turn our lodestone to private and have it so that when we unfriend someone they don't keep us 
 on their friendslist. Just so they can't follow us and know everything about our characters. 
 That's all. That doesn't negatively impact anyone except harassers. Stop enabling this behavior!
+
 
 I don't like bringing up bad topics but I'm genuinely shocked this is not talked about more, 
 especially with the immense influx of new players.
@@ -37,9 +42,77 @@ if you delete someone, you don't want THEM to keep YOU in THEIR friendslist. Div
 
 These are really simple changes that would go such a long way to make people feel safer.
 
+
 Edit: 
 We are aware that there's an option to report for this behavior, 
-but after a group of friends and I reported a stalker who harrassed our friend, nothing came off it. He continued harassing her (and eventually some of us) for weeks, until she quit and he got bored, and he's still playing this game, seemingly unhindered and unpunished. Maybe this is an issue with EU GMs, but they did not take this serious at all.
+but after a group of friends and I reported a stalker who harrassed our friend, 
+nothing came off it. He continued harassing her (and eventually some of us) for weeks, 
+until she quit and he got bored, and he's still playing this game, seemingly unhindered and unpunished. 
+Maybe this is an issue with EU GMs, but they did not take this serious at all.
 
 Edit 2:
 Yes, she also reported them, it wasn't JUST 3rd party reports.
+
+
+
+[JP]
+XIVのすべてのソーシャル機能はストーカーやハラスメントを可能にしており、これはもっと取り沙汰される問題であるべきだと思います。
+
+どうか、どうか、この投稿を見て賛同していただける方は、『吉Pへインタビュー』のスレッドでこの話題について質問し、
+私と一緒にフォーラム/Twitterに投稿してください。これについてはネガティブな報道でしか変わることはありません。
+
+
+歪曲した議論を続ける人がいるため追記：
+私は（そして嫌がらせを受けているほとんどの人は）Lodestoneを非公開にして、
+誰かとフレンド解除したらその人のフレンドリストに私たちが残らないようにする機能が欲しいだけです。
+そうすれば、彼らは私たちをフォローしたり、私たちのキャラクターのすべてを知ることはできません。
+ただそれだけです。嫌がらせをする人以外には悪影響を与えません。
+このような行為を許すのはやめてください。
+
+
+悪い話題を持ち出すのは好きではありませんが、特に新しいプレイヤーが大量に流入しているにもかかわらず
+このことがもっと話題にならないことに本当にショックを受けています。
+
+たとえば不愉快な人がいて、その人を避けたいと思っても、実際には出来ません。
+誰かをフレンドリストから削除しても、その人にはあなたが登録されたままです。
+つまり、名前を変えたり、FCを変えたり、あなたのことを知られないようにするために何をしても意味がありません。
+
+ブラックリストは、驚くべきことに、自分とマッチングされるのを防ぐことすらできません。 
+
+サーバー移転、名前変更、幻想薬...
+これを3回繰り返して誰だかわからなくしたとしても、
+(これはお金もかかるし面倒だし、不愉快な人を避けるためにこんなことをする必要はないと思いますが)
+LodestoneのURLさえあれば誰が何になったのか、どこでプレイしているのかを正確に知ることができるのです。
+
+そして、これらの手順を踏んだとしても、ゲーム内であなたをストーキングするために偽アカウントを作るのを防ぐことはできません。
+
+もしあなたがエターナルバンドをしたことがあって、
+その相手があなたにとって強迫観念的であったり、不健康であったりした場合、
+幸運なことに、彼らはあなたが何をしても永久にあなたに付きまとうことができるようになりました。
+彼らの指輪は、あなたが彼らとエターナルバンドを解消しても有効で、不愉快な人があなたに付きまとっているという事実をどうすることもできません。
+
+私はこのゲームをとても愛していますが、MMOなのでストーカーや嫌がらせはたくさんあります。
+怖い話をたくさん聞きましたし、それに対処しなければならなかった友人を慰めなければなりませんでしたし、
+自分自身も何度かこのような状況に陥りました。
+
+お願いがあります。どうか、このシステムをより安全なものにしてください。
+
+私たちのLodestoneをオフにしたり、非公開にできるように。
+フレンドリストからの削除は、双方にとって機能するように。
+もし誰かをフレンド解除したら、その人が自分のフレンドリストにあなたを残しておくのは嫌ですよね。
+エターナルバンドの解消は、あなたのものだけでなく、完全に指輪も無効にする必要があります。
+
+これらは本当に簡単な変更で、人々がより安全に感じるようにするための長い道のりです。
+
+
+追記：
+このような行為を報告することができるのは知っていますが、
+友人のグループと私が、友人に嫌がらせをするストーカーを報告した後も、何も起こりませんでした。
+彼は何週間も彼女(最終的には私たちの何人か)に嫌がらせをし続け、
+彼女がゲームを辞めて彼もそれに飽きてしまいましたが、
+彼はまだこのゲームをプレイしていて、一見何の妨げもなく罰も受けていないように見えます。
+これはEUのGMの問題なのかもしれませんが、彼らはこの件を全く深刻に受け止めていませんでした。
+
+追記2：
+そうですね。彼女も報告していましたし、第三者の報告だけではありませんでした。
+
