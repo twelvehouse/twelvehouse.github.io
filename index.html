@@ -1,67 +1,47 @@
 <!DOCTYPE html>
+
+<!-- 私はここにいるの　だから一緒にいるんだよ　ずっと... -->
+
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>canvas</title>
-    <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
-    </style>
-</head>
-<body>
+    <!-- header -->
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
+        <title>login</title>
+    </head>
 
-<script>
-  // キャンバスの定義
-	var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
+    <!-- body -->
+    <body id="zoomin">
+        
+        <div>
+            <h1 id="bokeh">#lain</h1>
+            <p id="bokeh">Let's all love Lain</p>
 
-  
-  // 円の初期位置
-  var x = canvas.width/2;
-  var y = canvas.height-30;
-  // 移動速度
-  var dx = 0.5;
-  var dy = -0.5;
-  var circleRadius = 5; // 円の半径
-  var circleColor = randomColor(); // 円の初期カラー
+            <h2 id="bokeh">
+                予言を実行せよ予言を実行せよ予言<br>
+                を実行せよ予言を実行せよ予言を実<br>
+                行せよ予言を実行せよ予言を実行せ<br>
+                よ予言を実行せよ予言を実行せよ予<br>
+                言を実行せよ予言を実行せよ予言を<br>
+                実行せよ予言を実行せよ予言を実行<br>
+                せよ予言を実行せよ予言を実行せよ<br>
+                予言を実行せよ予言を実行せよ予言<br>
+                を実行せよ予言を実行せよ予言を実<br>
+                行せよ予言を実行せよ予言を実行せ<br>
+                よ予言を実行せよ予言を実行せよ予<br>
+                言を実行せよ予言を実行せよ予言を<br>
+                実行せよ予言を実行せよ予言を実行<br>
+                せよ予言を実行せよ予言を実行せよ<br>
+            </h2>
+        </div>
 
-  // 円の描画
-  function drawCircle() {
-    ctx.beginPath();
-    ctx.arc(x, y, circleRadius, 0, Math.PI*2);
-    ctx.fillStyle = circleColor;
-    ctx.fill();
-    ctx.closePath();
-  }
-
-  // ランダムにカラーコードを生成
-  function randomColor() {
-    var color = circleColor = "rgb(" + (~~(256 * Math.random())) + ", " + (~~(256 * Math.random())) + ", " + (~~(256 * Math.random())) + ")" ;
-    return color;
-  }
-
-  // 更新処理
-  function update() {
-    // ctx.clearRect(0, 0, canvas.width, canvas.height); // 古いフレームを削除
-    drawCircle(); // 円を描画
-    x += dx;
-    y += dy;
-
-    // 上下左右にぶつかったらベクトルを判定してカラー変更
-    if(x + dx > canvas.width - circleRadius || x + dx < circleRadius) {
-      dx = -dx;
-      circleColor = randomColor();
-    }
-    if(y + dy > canvas.height - circleRadius || y + dy < circleRadius) {
-      dy = -dy;
-      circleColor = randomColor();
-    }
-  }
-  // 更新処理の更新
-  setInterval(update, 1);
-</script>
-
-</body>
+        <script>
+            // document.getElementById("h2").addEventListener("mouseover", function(){
+            //     document.getElementById("h2").style.
+            // })
+        </script>
+    </body>
 </html>
