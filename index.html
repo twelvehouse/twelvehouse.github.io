@@ -14,9 +14,9 @@
     </head>
 
     <!-- body -->
-    <body id="zoomin">
-        
-        <div>
+    <body>
+
+        <div id="zoomin">
             <h1 id="bokeh">#lain</h1>
             <p id="bokeh">Let's all love Lain</p>
 
@@ -38,10 +38,44 @@
             </h2>
         </div>
 
+        <div id="login"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
         <script>
-            // document.getElementById("h2").addEventListener("mouseover", function(){
-            //     document.getElementById("h2").style.
-            // })
+            // パスワード判定
+            function matchPass() {
+                var inpass = document.forms["loginform"].elements["inpass"].value;
+                var validpass = "941404ba117ad7fee3939f2c7eb13d2a1fec5e0c51af5b755c44f7e1543455f2"; // SHA-256ハッシュ値
+
+                // 入力されたパスワードをSHA-256ハッシュ関数で暗号化する
+                var hashedpass = CryptoJS.SHA256(inpass).toString();
+
+                // デバッグ用にコンソールに出力
+                console.log(inpass)
+                console.log(hashedpass)
+
+                if (hashedpass == validpass) {
+                    // リンクに飛ぶ
+                    window.location.href = "https://www.youtube.com/watch?v=JlBLcLdTYr4";
+                } else {
+                    // input要素をリセットする
+                    document.forms["loginform"].elements["inpass"].value = "";
+                }
+            }
+
+            // スラッシュキーが入力されたらコマンドインプットを描画する
+            document.addEventListener('keydown', (event) => {
+                const keyName = event.key;
+                if (keyName === '/') {
+                    // すべての bokeh を zoomout に置き換える
+                    for (let index = 0; index < 3; index++) {
+                        document.getElementById("bokeh").id = "zoomout";
+                    }
+                    // zoomin要素の上にlogin要素を重ねて描画する
+                    document.getElementById("login").innerHTML = '<form name="loginform" onsubmit="matchPass(); return false;"><div id="login"><h1>login</h1><input type="password" name="inpass" placeholder="password"></div></form>';
+                    // document.getElementById("login").innerHTML = '<form name="loginform"><div id="login"><h1>login</h1><input type="password" name="inpass" placeholder="password"><input type="button" value="login" onclick="matchPass()"></div></form>';
+                }
+            });
         </script>
     </body>
 </html>
