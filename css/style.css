@@ -67,7 +67,7 @@ p {
     }
     
     to {
-        filter: blur(50px);
+        filter: blur(35px);
     }
 }
 /* ゆらゆらピンボケ */
