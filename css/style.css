@@ -104,3 +104,6 @@ p {
     user-select: none; /* 標準 */
     animation: zoomin 2s both ease-out;
 }
+input {
+    text-align: center;
+}
